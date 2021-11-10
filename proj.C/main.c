@@ -3,6 +3,15 @@
 
 int main()
 {
-    printf("Hello world!\n");
+     char nom_variable = 'r';
+   printf("%c\n",nom_variable);
     return 0;
 }
+
+
+
+
+
+
+
+//les specificateure
