@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main()
 {
-int age =17;
-/*if (age>=18){
-    printf("tu peu entrer a Youcode");
+char matiere[30][5] ;
+float notte [6];
+int i=0;
+while(i<5){
+printf("taper la matiere %d\n",i+1);
+scanf("%s",matiere[i]);
+i++;
 }
-else {
-    printf("pardont tu ne peu pas entrer a Youcode cette anner");
-}*/
-
-printf("taper votre age ");
-scanf("%d",&age);
-switch ( age){
-        case 18 :printf("tu es capable pour entrer a Youcode cette anner");
-        case 17:printf("tu ne peu pas entrer a youcode cette anner");
-
-
-        }
+int c=0;
+while(c<5){
+printf("taper la notte de %s \n",matiere[c]);
+scanf("%f",&notte[c]);
+c++;
+}
+int m=0;
+while(m<5){
+    printf("la notte de %s est %.2f\n",matiere[m],notte[m]);
+    m++;
+}
     return 0;
 }
 
