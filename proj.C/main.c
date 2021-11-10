@@ -2,8 +2,8 @@
 #include <stdlib.h>
 int main()
 {
-char matiere[30][50] ;
-int notte [15];
+char matiere[5][50] ;
+int notte [5];
 int i=0;
 while(i<5){
 printf("taper la matiere %d\n",i+1);
@@ -30,7 +30,7 @@ while(m<5){
 printf("*************************\n");
 printf("la somme des notte est %d\n",S);
 printf("*************************\n");
-printf ("la moyenne des votre notes est %.2f",M);
+printf ("la moyenne des votre notes est %.2f\n",M);
 printf("*************************\n");
 
 
