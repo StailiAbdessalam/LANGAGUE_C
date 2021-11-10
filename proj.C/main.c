@@ -3,15 +3,25 @@
 
 int main()
 {
-     char nom_variable = 'r';
-   printf("%c\n",nom_variable);
+int age =17;
+/*if (age>=18){
+    printf("tu peu entrer a Youcode");
+}
+else {
+    printf("pardont tu ne peu pas entrer a Youcode cette anner");
+}*/
+
+printf("taper votre age ");
+scanf("%d",&age);
+switch ( age){
+        case 18 :printf("tu es capable pour entrer a Youcode cette anner");
+        case 17:printf("tu ne peu pas entrer a youcode cette anner");
+
+
+        }
     return 0;
 }
 
 
 
 
-
-
-
-//les specificateure
