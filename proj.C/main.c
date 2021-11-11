@@ -29,11 +29,14 @@ while(m<5){
 }
 printf("*************************\n");
 printf("la somme des notte est %d\n",S);
-printf("*************************\n");
+printf("** ***********************\n");
 printf ("la moyenne des votre notes est %.2f\n",M);
 printf("*************************\n");
-
-
+if (M>10){
+    printf("tu as valider cette anner\n ");
+}else{
+printf("tu ne valider pas cette anner \n");
+}
 
     return 0;
 }

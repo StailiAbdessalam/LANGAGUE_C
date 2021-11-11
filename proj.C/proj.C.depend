@@ -1,5 +1,9 @@
 # depslib dependency file v1.0
-1636556680 source:c:\users\youcode\desktop\new_repository\new_repository\proj.c\main.c
+1636618415 source:c:\users\youcode\desktop\new_repository\new_repository\proj.c\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1636557599 source:c:\users\youcode\desktop\test.c
 	<stdio.h>
 	<stdlib.h>
 
