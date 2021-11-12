@@ -6,13 +6,14 @@ int main(){
     int option ;
 //cette parter permit a l'utilisateur l'option qui choisi .
     debut :
+    printf("################################################  MENU   #######################################################\n");
     printf("cette programme fait le rolle de calculatrice fait la multiplication la somme la deferance et devision et qu'il que autre chause \n");
     printf("*****************************************\n");
     printf("on a 3 option dans cette calculatrice :\n*************************************************\ntaper 1 pour fait une calculle avec deux nombres a les opérateures .\ntaper 2 pour resoudre une equation de premier degrer . \ntaper 3 pour resoudre un equation de deuxemme degre .\ntaper sur 4 pour calculer la distance entre deux point .\n");
-    printf("*****************************************\n");
+    printf("###############################################################################################################\n");
     scanf("%d",&option);
 //cette 'while' pour cadrer les choisir de l'utilisateur a les trois option .
-    while (option>44 || option <1){
+    while (option>4 || option <1){
         printf("on a 3 option s'il veux plait choisi entre 1 et 3:\n");
         scanf("%d",&option);
     }
@@ -31,7 +32,7 @@ printf("*****************************************\n");
 printf("%d + %d = %d\n",num1,num2,num1+num2);
 printf("%d - %d = %d\n",num1,num2,num1-num2);
 printf("%d * %d = %d\n",num1,num2,num1*num2);
-printf("%d / %d = %d\n",num1,num2,num1/num2);
+printf("%d / %d = %f\n",num1,num2,num1/num2);
 printf("*****************************************\n");
 // cette partie pour rotourne a debut de code
 printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
@@ -129,13 +130,15 @@ float N = y2-y1;
 float S=M*M;
 float K =N*N;
 float regle = sqrt(S+K);
+    system("cls");
 printf("la distance entre le point 1 est le point 2 est : %.2f\n",regle);
 printf("*****************************************\n");
 printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
 scanf("%d",&CH);
 
 if (CH==1){
-    system("cls");
+            system("cls");
+
    goto debut  ;
         }
     }
