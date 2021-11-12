@@ -8,11 +8,11 @@ int main(){
     debut :
     printf("cette programme fait le rolle de calculatrice fait la multiplication la somme la deferance et devision et qu'il que autre chause \n");
     printf("*****************************************\n");
-    printf("on a 3 option dans cette calculatrice :\n*************************************************\ntaper 1 pour fait une calculle avec deux nombres a les opérateures .\ntaper 2 pour resoudre une equation de premier degrer . \ntaper 3 pour resoudre un equation de deuxemme degre .\n");
+    printf("on a 3 option dans cette calculatrice :\n*************************************************\ntaper 1 pour fait une calculle avec deux nombres a les opérateures .\ntaper 2 pour resoudre une equation de premier degrer . \ntaper 3 pour resoudre un equation de deuxemme degre .\ntaper sur 4 pour calculer la distance entre deux point .\n");
     printf("*****************************************\n");
     scanf("%d",&option);
 //cette 'while' pour cadrer les choisir de l'utilisateur a les trois option .
-    while (option>3 || option <1){
+    while (option>44 || option <1){
         printf("on a 3 option s'il veux plait choisi entre 1 et 3:\n");
         scanf("%d",&option);
     }
@@ -70,7 +70,7 @@ scanf("%d",&CH);
             system("cls");
    goto debut  ;
      }
-}else{
+}else if (option==3 ){
     int a,b,c;
 system("cls");
 printf("tu as choisi l'option trois: \n");
@@ -111,8 +111,33 @@ if (CH==1){
         system("cls");
    goto debut  ;
         }
-}
+}else if (option==4){
+int w1,w2,y1,y2;
+printf("taper les cordonners de piont 1 :\n");
+printf("taper l'abssice de point 1:\n");
+scanf("%d",&w1);
+printf("taper l'ordonner de point 1:\n");
+scanf("%d",&y1);
+printf("*****************************************\n");
+printf("taper les cordonners de piont 2 :\n");
+printf("taper l'abssice de 2 :\n");
+scanf("%d",&w2);
+printf("taper l'ordonner de 2 :\n");
+scanf("%d",&y2);
+float M = w2-w1;
+float N = y2-y1;
+float S=M*M;
+float K =N*N;
+float regle = sqrt(S+K);
+printf("la distance entre le point 1 est le point 2 est : %.2f\n",regle);
+printf("*****************************************\n");
+printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
+scanf("%d",&CH);
 
-
+if (CH==1){
+    system("cls");
+   goto debut  ;
+        }
+    }
     return 0;
 }
