@@ -44,16 +44,16 @@ if (CH==1){
 
 //c'est la deuxiemme option , cette partie resoudres les solution de l'equation de la premier degrie
     }else if(option == 2){
-        int A,B;
+        float A,B;
         system("cls");
     printf("tu choisir la deuxieme option :\n");
     printf("entrer le A de l'equation \n");
-    scanf("%d",&A);
+    scanf("%f",&A);
     printf("entrer le B de l'equation\n");
-    scanf("%d",&B);
+    scanf("%f",&B);
          printf("*****************************************\n");
          system("cls");
-         printf("votre equation est %dX + %d = 0\n ",A,B);
+         printf("votre equation est %.1fX + %.1f = 0\n ",A,B);
          printf("*****************************************\n");
 
     if(A==0){
@@ -62,7 +62,7 @@ if (CH==1){
      printf("*****************************************\n");
 
     }else if (A!=0){
-    printf("la solution de cette equation est %d ",-1*B/A);
+    printf("la solution de cette equation est %.2f\n",-1*B/A);
 
     }
     printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
