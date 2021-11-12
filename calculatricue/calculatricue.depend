@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1636716686 source:c:\users\youcode\desktop\new_repository\new_repository\calculatricue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
