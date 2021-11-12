@@ -101,7 +101,7 @@ float x1=((-1*b)-(sqrt(delta)))/2*a;
 
 
 }else if(delta==0){
-    float x=(-1*b)/a;
+    float x=(-1*b)/2*a;
     printf("cette equation admit un seulle solution c'est : %.2f\n",x);
     }
       printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
