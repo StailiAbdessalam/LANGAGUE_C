@@ -1,48 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+// pour resoudres le probleme de scanf (====getc(stdin);=====)
 int main(){
     int option ;
-//cette parter permit a l'utilisateur l'option qui choisi .
     debut :
+//cette parter permit a l'utilisateur l'option qui choisi .
     printf("################################################  MENU   #######################################################\n");
     printf("cette programme fait le rolle de calculatrice fait la multiplication la somme la deferance et devision et qu'il que autre chause \n");
     printf("*****************************************\n");
     printf("on a 3 option dans cette calculatrice :\n*************************************************\ntaper 1 pour fait une calculle avec deux nombres a les opérateures .\ntaper 2 pour resoudre une equation de premier degrer . \ntaper 3 pour resoudre un equation de deuxemme degre .\ntaper sur 4 pour calculer la distance entre deux point .\n");
     printf("###############################################################################################################\n");
     scanf("%d",&option);
-//cette 'while' pour cadrer les choisir de l'utilisateur a les trois option .
+//cette 'while' pour cadrer les choisir de l'utilisateur a les quatres option .
     while (option>4 || option <1){
         printf("on a 3 option s'il veux plait choisi entre 1 et 3:\n");
         scanf("%d",&option);
     }
 //cette partie il calcule deux nombres a tous les orateurs.
-    int num1, num2,CH;
+    float num1, num2;
+    int CH ;
     if (option ==1){
 printf("*****************************************\n");
 printf("tu choisi l'option 1 :\n");
 printf("entrer le chifre 1 :\n");
-scanf("%d",&num1);
+scanf("%f",&num1);
 printf("entrer le chifre 2 :\n");
-scanf("%d",&num2);
+scanf("%f",&num2);
 system("cls");
 printf("le chiffre 1 est: %d .\nle chiffre 2 est : %d:\n",num1,num2);
 printf("*****************************************\n");
-printf("%d + %d = %d\n",num1,num2,num1+num2);
-printf("%d - %d = %d\n",num1,num2,num1-num2);
-printf("%d * %d = %d\n",num1,num2,num1*num2);
-printf("%d / %d = %f\n",num1,num2,num1/num2);
+printf("%.2f + %.2f = %.2f\n",num1,num2,num1+num2);
+printf("%.2f - %.2f = %.2f\n",num1,num2,num1-num2);
+printf("%.2f * %.2f = %.2f\n",num1,num2,num1*num2);
+printf("%.2f / %.2f = %.2f\n",num1,num2,num1/num2);
 printf("*****************************************\n");
-// cette partie pour rotourne a debut de code
+// cette partie pour rotourne a debut de code on vas repeter cette patie 4 fois .
 printf("taper sur un numuro pour sortie a programe \ntaper 1 pour faire un nottre calcule\n");
 scanf("%d",&CH);
 if (CH==1){
-        system("cls");
+    system("cls");
    goto debut  ;
 }
 
-//c'est la deuxiemme option , cette partie resoudres les solution de l'equation de la premier degrie
+//c'est la deuxiemme option , cette partie resoudres les solution de l'equation de la premier Degrie
     }else if(option == 2){
         float A,B;
         system("cls");
@@ -55,7 +56,7 @@ if (CH==1){
          system("cls");
          printf("votre equation est %.1fX + %.1f = 0\n ",A,B);
          printf("*****************************************\n");
-
+//pour resoudres les solition de cette equation on a deux cas .
     if(A==0){
      printf("*****************************************\n");
      printf("on a aucune solution de cette equation\n");
@@ -71,6 +72,7 @@ scanf("%d",&CH);
             system("cls");
    goto debut  ;
      }
+     //cette partie pour fait option 3 (resoudres l'equation de deuxiemme Degrie)
 }else if (option==3 ){
     int a,b,c;
 system("cls");
@@ -86,6 +88,7 @@ system("cls");
 printf("*****************************************\n");
 
 printf("votre equation est %dXX + %dX + %d = 0\n",a,b,c);
+//calculer delta pour detaier les cas de solution .
 printf("*****************************************\n");
   float  delta=(b*b)-(4*a*c);
 if(delta<0){
@@ -112,6 +115,7 @@ if (CH==1){
         system("cls");
    goto debut  ;
         }
+        //cette oartie pour fait option 4 (calculer la distance entre deux points)
 }else if (option==4){
 int w1,w2,y1,y2;
 printf("taper les cordonners de piont 1 :\n");
