@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1637161302 source:c:\users\youcode\desktop\new_repository\new_repository\recherch_un_chiffre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
