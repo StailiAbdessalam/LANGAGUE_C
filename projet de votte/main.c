@@ -3,8 +3,21 @@
 
 int main()
 {
-    int numcandida;
-    printf("1_khalid leamrani\n2_mohamed laalaoui\n3_omar tahar\n**********************************\n");
+int numcandida;
+int numP;
+    printf("bonjeur , taper le nombres des presedent :\n");
+    scanf("%d",&numP);
+    while(numP<5 && numP>0){
+        printf("s'il veux plait taper le nombres des presedent .\nATTENTION 5 c'est le miniment de nombre de presedent \n ");
+        scanf("%d",&numP);
+    }
+int o = 0;
+char NOMP [20][numP];
+    while(o<numP){
+        printf("taper le nom de presedent %d :",o+1);
+        scanf("%[^\n]s",&NOMP[o]);
+        o++;
+    }
     printf("choisi un number des candidas pour voter sur cette trois presedent \n");
 scanf("%d",&numcandida);
 char CIN [numcandida][10];
@@ -17,8 +30,6 @@ while(i<numcandida){
 int votte;
 int K,S,V;
 system("cls");
-    printf("1_khalid leamrani\n2_rajae hassnawi\n3_omar tahar\n**********************************\n");
-
 for (i=0;i<numcandida;i++){
     printf("le candida de la carte nationnalle %s voter sur un presedent \n",CIN[i]);
     scanf("%d",&votte);
@@ -48,3 +59,4 @@ printf("le presedent qui ganger c'est mohamed laalaoui");
 system("cls");
     return 0;
 }
+
