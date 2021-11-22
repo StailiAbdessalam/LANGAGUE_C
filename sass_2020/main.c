@@ -1,11 +1,12 @@
 #include<stdio.h>
-
+#include <time.h>
 #include<stdlib.h>
-
+#include <conio.h>
 #include <string.h>
+#include <windows.h>
+#include <unistd.h>
 
 int main() {
-
         printf("ELECTION PRESIDENTIELLE\n\n");
 
         int cmp = 0;
@@ -152,7 +153,7 @@ int main() {
 
 //Calcul du % et stockage de chaque % calcule dans un nouveau TabCheck.
         for (i = 0; i < nombrePres; i++) {
-                prc = ((float) TabRes[i] / (float) nombreElect) * 100;
+                prc = (((float) TabRes[i] / (float) nombreElect)) * 100;
                 TabCheck[i] = prc;
         }
 
@@ -341,7 +342,6 @@ int main() {
                         for (i = 0; i < nombrePres3; i++) {
                                 printf("\nPresident %s a %d votes.\n", TabPres3[i], TabRes3[i]);
                         }
-
 //Calcul du max pour trouver le president qui a eu le maximum des votes au 3eme tour de l'election
                         int max = TabRes3[0];
 
@@ -409,8 +409,22 @@ int main() {
 
 //Affichage du president gagnant de la presidentielle
                         for (i = 0; i < nombrePres4; i++) {
-                                printf("#########################################\n");
-                                printf("\nPresident %s a remporte l'election presidentielle !!!\n", TabPres4[0]);
+                                printf("##########################################################################################\n");
+                                printf("s'il veux plait ATTENDER 5 second pour calculer les vottes et mrc \n");
+                                printf(".");
+                                sleep(2);
+                                printf(".");
+                                sleep(2);
+                                printf(".");
+                                sleep(2);
+                                printf(".");
+                                sleep(2);
+                                printf(".");
+                                sleep(1);
+                                printf("...");
+                                sleep(2);
+                                printf("\n#####################################################################################\n");
+                                printf("President %s a remporte l'election presidentielle !!!\n", TabPres4[0]);
                                 printf("#########################################\n");
 
                         }

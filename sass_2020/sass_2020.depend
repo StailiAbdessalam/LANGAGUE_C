@@ -1,6 +1,10 @@
 # depslib dependency file v1.0
-1637142128 source:c:\users\youcode\desktop\new_repository\new_repository\sass_2020\main.c
+1637314455 source:c:\users\youcode\desktop\new_repository\new_repository\sass_2020\main.c
 	<stdio.h>
+	<time.h>
 	<stdlib.h>
+	<conio.h>
 	<string.h>
+	<windows.h>
+	<unistd.h>
 

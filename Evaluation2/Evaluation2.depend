@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637339933 source:c:\users\youcode\desktop\new_repository\new_repository\evaluation2\main.c
+	<stdio.h>
+	<stdlib.h>
+
