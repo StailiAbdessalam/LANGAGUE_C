@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1637593205 source:c:\users\youcode\desktop\new_repository\new_repository\abdessalam_sass_2021\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<ctype.h>
+	<string.h>
+
