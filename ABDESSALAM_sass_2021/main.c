@@ -22,6 +22,7 @@ int main(){
                 char nomPrenom[25][30];
                 char cin[25][10];
                 double montant[25];
+
             start:
                 system("cls");
                 menu_affichage();
@@ -181,7 +182,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
                         printf("Entrer le numero de compte pour fair l'operation : ");
                         scanf("%d", &numCompte);
                     }
-                    numCompte--;//bach ila 3zal compte n°1 ymchi l'indice zero
+                    numCompte--;//bach ila 3zal compte nÂ°1 ymchi l'indice zero
                     double retrait;
                     bool retraitValable = true;// pour entrer dans la boucle while
                     while(retraitValable)
@@ -342,7 +343,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
                 system("cls");
                 printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
                 //menu d'ascendant
-                printf("\t1-Par Ordre Ascendant.\n\t2-Par Ordre Ascendant (les comptes bancaire ayant un montant supérieur à un chiffre introduit).\n\t3-Reteur au menu.\n");
+                printf("\t1-Par Ordre Ascendant.\n\t2-Par Ordre Ascendant (les comptes bancaire ayant un montant supÃ©rieur Ã  un chiffre introduit).\n\t3-Reteur au menu.\n");
                 int triChoix; //pour stocker les options d'ascendant
                 printf("\n\n  choisi l\'opperation que tu veux : ");
                 scanf("%d", &triChoix);//pour stocker les options d'ascendant
@@ -352,7 +353,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
                     printf("\n\n  choisissez l'opperation que vous voulez : ");
                     scanf("%d", &triChoix);
                 }
-            if(triChoix == 1)// si il choisi 1 trier le tableau croissant
+            if(triChoix == 1){// si il choisi 1 trier le tableau croissant
                 char minNomePrenome[100][30];
                 char minCin[100][30];
                 double minMontant[100];
@@ -441,7 +442,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
             system("cls");
             printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
             // menu de descendant
-            printf("\t1-Par Ordre Descendant.\n\t2-Par Ordre Descendant (les comptes bancaire ayant un montant supérieur à un chiffre introduit).\n\t3-Reteur au menu.\n");
+            printf("\t1-Par Ordre Descendant.\n\t2-Par Ordre Descendant (les comptes bancaire ayant un montant supÃ©rieur Ã  un chiffre introduit).\n\t3-Reteur au menu.\n");
             int triChoix; //stocker les options de descendant
             printf("\n\n  choisissez l'opperation que vous voulez : ");
             scanf("%d", &triChoix);//stocker les options de descendant
@@ -610,11 +611,11 @@ chercherAutrefois:
             system("cls");
             printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
             printf("\t1-Ajouter 1.3%% aux comptes ayant les 3 premiers montants superieurs.\n\t2-Reteur au menu.\n");
-            int fidelisationMenu;// variable that store client's choice on 5)Fidélisation.
+            int fidelisationMenu;// variable that store client's choice on 5)FidÃ©lisation.
             printf("\n\n  choisi l'opperation que tu veux : ");
             scanf("%d", &fidelisationMenu);
 
-            while(fidelisationMenu < 0 || fidelisationMenu > 2)   // start again if the input is not much with the Fidélisation menu using while loop.
+            while(fidelisationMenu < 0 || fidelisationMenu > 2)   // start again if the input is not much with the FidÃ©lisation menu using while loop.
             {
                 printf("\033[0;31m  Le choix que vous avez entre n'appartient pas au menu.\033[0m\nvoller essayer autre fois : ");
                 scanf("%d", &fidelisationMenu);
