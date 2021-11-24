@@ -5,16 +5,9 @@
 #include <string.h>
 
 //cette fonction pour afficher le munu principale de ce programe.
-void menu_affichage()
-{
-
-    printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
-    printf("\t1-Introduire un compte bancaire.\n\t2-Introduire plusieurs comptes bancaires.\n\t3-Operations (Retrait-Depot).\n\t4-Affichage.\n\t5-Fidelisation.\n\t6-afficher la liste des comptes.\n\t7-Quitter l'application.\n");
-    printf("\n\t\t\033[0;34m-----------------------------------------------------------------------------------------\033[0m\n");
-
-
-}
-
+void triAcd(int n,double montant [25],char cin[25][10],char nomPrenom [25][30]); //cette fonction fait un trie des element de tableau caroissante .
+void triDcd (int n,double montant[25],char cin[25][10],char nomPrenom [25][30]); //cette fonction fait un trie des element de tableau caroissante .
+void menu_affichage();
 int main(){
                 bool compte = false;// if false . taper un message pour creer un compte premierment
                 int m;//number of plusieur acounts
@@ -354,28 +347,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
                     scanf("%d", &triChoix);
                 }
             if(triChoix == 1){// si il choisi 1 trier le tableau croissant
-                char minNomePrenome[100][30];
-                char minCin[100][30];
-                double minMontant[100];
-
-                for(int i = 1 ; i < n ; i++)// pour trier le tableau
-                {
-                    for(int j = 0 ; j < n-1 ; j++)
-                    {
-                        if(montant[j] > montant[i]) // pour trier croissant
-                        {
-                            minMontant[100]=montant[i] ;
-                            montant[i] = montant[j];
-                            montant[j]=minMontant[100];
-                            strcpy(minCin,cin[i]);
-                            strcpy(cin[i],cin[j]);
-                            strcpy(cin[j],minCin);
-                            strcpy(minNomePrenome,nomPrenom[i]);
-                            strcpy(nomPrenom[i],nomPrenom[j]);
-                            strcpy(nomPrenom[j],minNomePrenome);
-                        }
-                    }
-                }
+    triAcd(n,montant,cin, nomPrenom);
                 system("cls");
                 printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
                 for(int i = 0 ; i < n ; i++)  // print tous les comptes ascendant
@@ -391,33 +363,10 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
             }
             else if (triChoix == 2)//pour trier tous les comptes ascendants > un chiffre
             {   //ces 3 variables leurs roles changer les valeurs de deux cases
-                char minNomePrenome[100][30];
-                char minCin[100][30];
-                double minMontant[100];
                 double S ; //pour stocker le chiffre
                 printf("entrer le chiffre qui vous voulez\t");
                 scanf("%lf",&S);//pour stocker le chiffre
-
-                for(int i = 1 ; i < n ; i++)
-                {
-                    for(int j = 0 ; j < n-1 ; j++)
-                    {
-                        if(montant[j] > montant[i]) // pour trier croissant
-                        {
-                            minMontant[100]=montant[i] ;
-                            montant[i] = montant[j];
-                            montant[j]=minMontant[100];
-                            strcpy(minCin,cin[i]);
-                            strcpy(cin[i],cin[j]);
-                            strcpy(cin[j],minCin);
-                            strcpy(minNomePrenome,nomPrenom[i]);
-                            strcpy(nomPrenom[i],nomPrenom[j]);
-                            strcpy(nomPrenom[j],minNomePrenome);
-
-
-                        }
-                    }
-                }
+triAcd( n, montant, cin,nomPrenom);
                 system("cls");
                 printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
                 for(int i = 0 ; i < n ; i++){ // print tous les comptes ascendant
@@ -455,31 +404,7 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
 
             if(triChoix == 1)// choisir option 1 de descendant
             {
-                char minNomePrenome[100][30];
-                char minCin[100][30];
-                double minMontant[100];
-
-                for(int i = 1 ; i < n ; i++)// pour trier le tableau descendant
-                {
-
-                    for(int j = 0 ; j < n-1 ; j++)
-                    {
-                        if(montant[j] < montant[i])
-                        {
-                            minMontant[100]=montant[i] ;
-                            montant[i] = montant[j];
-                            montant[j]=minMontant[100];
-                            strcpy(minCin,cin[i]);
-                            strcpy(cin[i],cin[j]);
-                            strcpy(cin[j],minCin);
-                            strcpy(minNomePrenome,nomPrenom[i]);
-                            strcpy(nomPrenom[i],nomPrenom[j]);
-                            strcpy(nomPrenom[j],minNomePrenome);
-
-
-                        }
-                    }
-                }
+triDcd(n,montant,cin,nomPrenom);
                 system("cls");
                 printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
 
@@ -496,33 +421,11 @@ if(choixMenu == 1)//c'est l'option 1 "pour traduire un compte"
             }
             else if (triChoix==2) // choisir option 2 de descendant
             {
-                char minNomePrenome[100][30];
-                char minCin[100][30];
-                double minMontant[100];
                 double S ;
                 printf("entrez le chiffre que vous voulez \t");
                 scanf("%lf",&S);// pour stocker un chiffre du montant
 
-                for(int i = 1 ; i < n ; i++)
-                {
-
-                    for(int j = 0 ; j < n-1 ; j++)
-                    {
-                        if(montant[j] < montant[i]) {
-                            minMontant[100]=montant[i] ;
-                            montant[i] = montant[j];
-                            montant[j]=minMontant[100];
-                            strcpy(minCin,cin[i]);
-                            strcpy(cin[i],cin[j]);
-                            strcpy(cin[j],minCin);
-                            strcpy(minNomePrenome,nomPrenom[i]);
-                            strcpy(nomPrenom[i],nomPrenom[j]);
-                            strcpy(nomPrenom[j],minNomePrenome);
-
-
-                        }
-                    }
-                }
+triDcd(n,montant,cin,nomPrenom);
                 system("cls");
                 printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
 
@@ -624,33 +527,7 @@ chercherAutrefois:
             if(fidelisationMenu == 1)
             {
                 printf(" Choisissez Ajouter 1.3%% aux comptes ayant les 3 premiers montants superieurs operation.\n");
-                char minNomePrenome[100][30];
-                char minCin[100][30];
-                double minMontant[100];
-
-                for(int i = 1 ; i < n ; i++)
-                {
-
-                    for(int j = 0 ; j < n-1 ; j++)
-                    {
-                        if(montant[j] < montant[i]) // check for the minimun account.
-                        {
-
-                            minMontant[100]=montant[i] ;
-                            montant[i] = montant[j];
-                            montant[j]=minMontant[100];
-
-                            strcpy(minCin,cin[i]);
-                            strcpy(cin[i],cin[j]);
-                            strcpy(cin[j],minCin);
-                            strcpy(minNomePrenome,nomPrenom[i]);
-                            strcpy(nomPrenom[i],nomPrenom[j]);
-                            strcpy(nomPrenom[j],minNomePrenome);
-
-
-                        }
-                    }
-                }
+triAcd(n,montant,cin,nomPrenom);
                 if(n<=3)
                 {
                     for (int i=0; i<n; i++)
@@ -670,10 +547,6 @@ chercherAutrefois:
                         printf("\n--------------------------------------------------------------\n\n");
                     }
                 }
-
-
-
-
                 printf("  Clickez entrer pour retourner au menu.\n");
                 system("pause");
                 goto start;
@@ -710,4 +583,67 @@ chercherAutrefois:
                 goto start;
             }
     return 0;
+}
+
+void triAcd(int n,double montant [25],char cin[25][10],char nomPrenom [25][30]){
+    char minNomePrenome[100][30];
+    char minCin[100][30];
+    double minMontant[100];
+            for(int i = 1 ; i < n ; i++)// pour trier le tableau
+            {
+                for(int j = 0 ; j < n-1 ; j++)
+                {
+                    if(montant[j] > montant[i]) // pour trier croissant
+                    {
+                        minMontant[100]=montant[i] ;
+                        montant[i] = montant[j];
+                        montant[j]=minMontant[100];
+                        strcpy(minCin,cin[i]);
+                        strcpy(cin[i],cin[j]);
+                        strcpy(cin[j],minCin);
+                        strcpy(minNomePrenome,nomPrenom[i]);
+                        strcpy(nomPrenom[i],nomPrenom[j]);
+                        strcpy(nomPrenom[j],minNomePrenome);
+                    }
+                }
+            }
+
+}
+void triDcd (int n,double montant[25],char cin[25][10],char nomPrenom [25][30]){
+    char minNomePrenome[100][30];
+    char minCin[100][30];
+    double minMontant[100];
+                for(int i = 1 ; i < n ; i++)// pour trier le tableau descendant
+                {
+
+                    for(int j = 0 ; j < n-1 ; j++)
+                    {
+                        if(montant[j] < montant[i])
+                        {
+                            minMontant[100]=montant[i] ;
+                            montant[i] = montant[j];
+                            montant[j]=minMontant[100];
+                            strcpy(minCin,cin[i]);
+                            strcpy(cin[i],cin[j]);
+                            strcpy(cin[j],minCin);
+                            strcpy(minNomePrenome,nomPrenom[i]);
+                            strcpy(nomPrenom[i],nomPrenom[j]);
+                            strcpy(nomPrenom[j],minNomePrenome);
+
+
+                        }
+                    }
+                }
+
+
+
+
+}
+void menu_affichage(){
+
+    printf("\n\t\t\t\t\033[0;44m      \t        \033[0;34m   Gestion Bancaire   \033[0m\033[0;44m        \t       \033[0m\n\n");
+    printf("\t1-Introduire un compte bancaire.\n\t2-Introduire plusieurs comptes bancaires.\n\t3-Operations (Retrait-Depot).\n\t4-Affichage.\n\t5-Fidelisation.\n\t6-afficher la liste des comptes.\n\t7-Quitter l'application.\n");
+    printf("\n\t\t\033[0;34m-----------------------------------------------------------------------------------------\033[0m\n");
+
+
 }
